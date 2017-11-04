@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="amherst.umass.hackathon.yopet.MainActivity">
+
+    <TextView
+        android:id="@+id/yopet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YoPet"
+        android:background="@drawable/circle"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="50sp"
+        android:textColor="#ffffff"
+        android:textSize="75dp"/>
+
+    <LinearLayout
+        android:layout_below="@id/yopet"
+        android:id="@+id/oldUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="30dp">
+
+        <Button
+            android:id="@+id/Owner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="owner"
+            android:layout_weight="1"
+
+            android:onClick="openOwnerLogin"
+            />
+
+        <Button
+            android:id="@+id/Sitter"
+            android:layout_below="@id/Owner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:onClick="openSitterLogin"
+
+            android:text="sitter"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_below="@id/oldUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:layout_marginTop="2dp"
+        android:text="need an account"/>
+
+    <Button
+        android:layout_below="@id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1"
+        android:text="new user"
+        android:onClick="newUser"
+        android:layout_marginTop="10dp"/>
+
+
+
+
+
+
+
+</RelativeLayout>
